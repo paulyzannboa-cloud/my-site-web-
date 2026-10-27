@@ -15,11 +15,11 @@
 
 1. Où se trouve physiquement le code qui fabrique votre page : sur votre ordinateur, sur GitHub ou sur PythonAnywhere ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ sur le github 
 
 2. Pourquoi votre voisin(e) peut-il voir votre site, alors que vous n'avez rien installé sur son ordinateur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ p
 
 ---
 
@@ -27,15 +27,16 @@
 
 1. Dans l'URL `https://www.google.com/maps`, quel est le nom de domaine ? Quel est le chemin ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ www.google.com est le nom de domaine et /maps est chemin 
 
 2. Que veut dire le message *Not Found* ? Qui l'a envoyé : votre navigateur ou le serveur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ le serveur a bien été contacté, mais le chemin de l’URL n’existe pas ou n’existe plus à cette adresse.
 
 3. Que se passe-t-il si deux fonctions portent le même nom dans `flask_app.py` ? (Indice : essayez, puis lisez l'Error log.)
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Flask refuse de démarrer, car deux fonctions du même nom créent deux routes sous un même identifiant interne, ce qui provoque une erreur visible dans l’Error log.
+
 
 ---
 
@@ -43,15 +44,17 @@
 
 1. Quelle est la différence entre ce que le serveur **envoie** et ce que le navigateur **affiche** ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le serveur envoie du texte brut et le navigateur l’interprète pour l’afficher sous forme de page visuelle.
+
 
 2. À quoi servent les balises `<h1>`, `<p>`, `<ul>` et `<li>` ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ a mettre des sous titre 
 
 3. Pourquoi l'image s'affiche-t-elle alors qu'elle n'est pas sur votre serveur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Parce que le serveur n’envoie pas l’image elle-même, seulement une balise HTML qui contient son adresse, et c’est le navigateur qui va ensuite la télécharger directement depuis cet autre serveur.
+
 
 ---
 
@@ -59,11 +62,11 @@
 
 1. Pourquoi est-ce une bonne idée de séparer le code Python et le HTML ? (Pensez à une équipe avec un développeur et un graphiste.)
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Parce que chacun peut travailler sur son propre fichier sans toucher à celui de l’autre
 
 2. Les `{{ prenom }}` sont-ils remplacés par le serveur ou par le navigateur ? Comment l'avez-vous vérifié ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Ils sont remplacés par le serveur  Flask remplit les {{ prenom }} avant d’envoyer la réponse, donc le navigateur ne reçoit jamais les accolades, seulement le texte final.
 
 ---
 
@@ -71,7 +74,7 @@
 
 1. Quelle est la différence de rôle entre le HTML et le CSS ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le HTML décrit le contenu et la structure de la page  tandis que le CSS décrit son apparence .
 
 2. Pour afficher votre page `/presentation`, combien de fichiers le navigateur doit-il télécharger ? (Vous pourrez le vérifier à l'exercice suivant !)
 
@@ -79,7 +82,7 @@
 
 3. Pourquoi faut-il parfois faire **Ctrl + F5** pour voir les changements de CSS ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Parce que le navigateur garde en cache une copie du fichier CSS pour ne pas le retélécharger à chaque visite, et il continue donc d’afficher l’ancienne version
 
 ---
 
@@ -87,7 +90,9 @@
 
 1. Que signifie HTTP ? Qui envoie la **requête** et qui envoie la **réponse** ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ HTTP signifie HyperText Transfer Protocol
+   > La requête est envoyée par le navigateur , qui demande une ressource, et la réponse est envoyée par le serveur, qui renvoie le contenu demandé ou un code d’erreur
+
 
 2. Combien de requêtes votre page `/presentation` a-t-elle déclenchées ? Lesquelles ?
 
@@ -95,13 +100,12 @@
 
 3. Que signifie le code `200` ? Et le code `404` de la favicon ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ 200 signaifie le serveur a trouvé la ressource demandée et l’a envoyée avec succès et 400 signifie le navigateur a automatiquement demandé l’icône du site  mais que le serveur n’en a pas, ce qui est sans gravité 
+
 
 4. Pourquoi les modifications faites dans l'onglet Éléments ne sont-elles pas visibles par les autres visiteurs ?
 
-   > _Ma réponse :_ 
-
----
+   > _Ma réponse :_Parce que l’onglet Éléments modifie uniquement la copie locale de la page chargée dans votre navigateur, pas le fichier sur le serveur
 
 ## 🟣 Exercice 7 — Envoyer des informations dans l'URL
 
